@@ -22,7 +22,36 @@
     </style>
   </head>
   <body>
-    
+     <div class="textContainer" id="textContainer1">
+            <p id="text1">
+                Imagine that you fall in love with a Picasso piece. 
+            </p>
+            <p class="text" id="text2"> 
+                <br> 
+                It elicits a powerful emotional response in you. 
+            </p>
+            <p class="text" id="text3">You love the craft. </p> 
+            <p class="text" id="text4">The message it sends.</p> 
+            <p class="text" id="text5">The overall effect of it.</p>
+            </p>
+        </div>
+        <div class="textContainer" id="textContainer2">
+          <p class="text_reveal" id="text6">
+              You later discover it was created by AI...
+          </p>
+          <p class="text_reveal" id="text7" style="opacity: 0">
+              Mimicking the style of Picasso. <br> <br>
+          </p>
+          <p class="text_reveal" id="text8" style="opacity: 0">Is your enjoyment of the painting diminished?</p> 
+          <p class="text_reveal" id="text9" style="opacity: 0">Do you find it less aesthetically pleasing?</p> 
+          <p class="text_reveal" id="text10" style="opacity: 0">Would you not want it on your wall?</p>
+          </p>
+        </div>
+        <button id="button1" class="showMoreButton" onclick="showNext()">Continue</button>
+        <button id="button2" class="showMoreButton" onclick="showNext2()" disabled>Continue</button>
+        <button id="yesButton" class="YNbutton" onclick="yes()" disabled>Yes, it changes my opinion</button>
+        <button id="noButton" class="YNbutton" onclick="no()" disabled>No, I appreciate it the same</button>
+    </div>
   
     <script>
       $(document).ready(function () {
