@@ -1,9 +1,242 @@
 <html>
   <head>
     <title> EXP14 - FINAL PROJECT - ERIC DUANMU & ANGELA MALIAKAL </title>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        body, html {
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+        }
+        body {
+          opacity: 0;
+          transition: opacity 0.5s ease-in-out;
+          -moz-transition: opacity 0.5s ease-in-out;
+          -webkit-transition: opacity 0.5s ease-in-out;
+        }
+        body.all-loaded {
+            opacity: 1;
+        }
+        #container {
+          vertical-align: middle;
+          margin: 30px 30px;
+          height: 100%;
+          width: 100%;
+        }
+        #canvasContainer {
+          float: left;
+          margin-left: 100px;
+          position: relative;
+          width: 35%;
+        }
+        .textContainer {
+          float: right;
+          position: absolute;
+          width: 700px;
+          top: 200px;
+          right: 100px;
+          left: 700px;
+        }
+        #frame {
+          vertical-align: middle;
+          margin-top: 50px;
+          height: 600px;
+          width: 400px;
+          position: relative;
+          z-index: 100;
+        }
+        .painting {
+          margin-top: 70px;
+          vertical-align: middle;
+          height: 540px;
+          width: 360px;
+          z-index: 80;
+          position: absolute;
+          left: 20px;
+        }
+        .showMe {
+          z-index: 90;
+          opacity: 1;
+        }
+        .pixelated {
+          margin-top: 70px;
+          vertical-align: middle;
+          height: 540px;
+          width: 360px;
+          z-index: 70;
+          position: absolute;
+          left: 20px;
+          visibility: hidden;
+        }
+        .text {
+          opacity: 0;
+        }
+        .showMoreButton {
+          position: absolute;
+          left: 950px;
+          top: 600px;
+          background: none;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          font-family: 'Roboto Mono', monospace;
+          font-size: 12pt;
+        }
+        .showMoreButton:hover {
+          cursor: default;
+        }
+        #button2 {
+          visibility: hidden;
+          opacity: 0;
+        }
+        #textContainer2 {
+          opacity: 0;
+        }
+        .YNbutton {
+          position: absolute;
+          background: none;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          font-family: 'Roboto Mono', monospace;
+          font-size: 12pt;
+          visibility: hidden;
+          opacity: 0;
+        }
+        #yesButton {
+          width: 265px;
+          top: 600px;
+          left: 650px;
+        }
+        #noButton {
+          width: 290px;
+          top: 600px;
+          left: 1050px;
+        }
+
+    </style>
   </head>
   <body>
+    <div id="container">
+        <div id="canvasContainer">
+            <img id="frame" src="frame.png">
+            <img class="painting" id="slide1" src="picasso1.jpg">
+            <img class="painting" id="slide2" src="picasso2.jpg">
+            <img class="painting" id="slide3" src="picasso3.jpg">
+            <img class="painting" id="slide4" src="picasso4.jpg">
+            <img class="painting" id="slide5" src="picasso5.jpg">
+            <img class="painting" id="slide6" src="picasso6.jpg">
+
+
+        </div>
+        <div class="textContainer" id="textContainer1">
+            <p id="text1">
+                Imagine that you fall in love with a Picasso piece. 
+            </p>
+            <p class="text" id="text2"> 
+                <br> 
+                It elicits a powerful emotional response in you. 
+            </p>
+            <p class="text" id="text3">You love the craft. </p> 
+            <p class="text" id="text4">The message it sends.</p> 
+            <p class="text" id="text5">The overall effect of it.</p>
+            </p>
+        </div>
+        <div class="textContainer" id="textContainer2">
+          <p class="text_reveal" id="text6">
+              You later discover it was created by AI...
+          </p>
+          <p class="text_reveal" id="text7" style="opacity: 0">
+              Mimicking the style of Picasso. <br> <br>
+          </p>
+          <p class="text_reveal" id="text8" style="opacity: 0">Is your enjoyment of the painting diminished?</p> 
+          <p class="text_reveal" id="text9" style="opacity: 0">Do you find it less aesthetically pleasing?</p> 
+          <p class="text_reveal" id="text10" style="opacity: 0">Would you not want it on your wall?</p>
+          </p>
+        </div>
+        <button id="button1" class="showMoreButton" onclick="showNext()">Continue</button>
+        <button id="button2" class="showMoreButton" onclick="showNext2()" disabled>Continue</button>
+        <button id="yesButton" class="YNbutton" onclick="yes()" disabled>Yes, it changes my opinion</button>
+        <button id="noButton" class="YNbutton" onclick="no()" disabled>No, I appreciate it the same</button>
+    </div>
   
+    <script>
+      $(document).ready(function () {
+          $('body').addClass("all-loaded");
+      });
+      function showNext() {
+        $("#button1").prop("disabled", true);
+        $("#button1").animate({opacity: 0}, 500);
+        $("#button1").css("visibility", "hidden");
+        $("#text2").delay(1000).animate({opacity: 1}, 500);
+        $("#text3").delay(4000).animate({opacity: 1}, 500);
+        $("#text4").delay(6000).animate({opacity: 1}, 500);
+        $("#text5").delay(8000).animate({opacity: 1}, 500);
+        $("#button2").delay(10000).animate({opacity: 1}, 500);
+        $("#button2").delay(10000).css("visibility", "visible");
+        $("#button2").delay(10000).prop("disabled", false);
+      }
+
+      function showNext2() {
+
+        document.getElementById("slide1").src = "pixel1.jpg";
+        document.getElementById("slide2").src = "pixel2.jpg";
+        document.getElementById("slide3").src = "pixel3.jpg";
+        document.getElementById("slide4").src = "pixel4.jpg";
+        document.getElementById("slide5").src = "pixel5.jpg";
+        document.getElementById("slide6").src = "pixel6.jpg";
+
+        $("#button2").prop("disabled", true);
+        $("#button2").animate({opacity: 0}, 500);
+        $("#button2").css("visibility", "hidden");
+        $("#textContainer1").animate({opacity: 0}, 500);
+        $("#textContainer2").delay(500).animate({opacity: 1}, 500);
+        $("#text7").delay(2500).animate({opacity: 1}, 500);
+        $("#text8").delay(5000).animate({opacity: 1}, 500);
+        $("#text9").delay(7500).animate({opacity: 1}, 500);
+        $("#text10").delay(10000).animate({opacity: 1}, 500);
+
+        $(".YNbutton").css("visibility", "visible");
+        $("#yesButton").delay(12000).animate({opacity: 1}, 500);
+        $("#noButton").delay(12000).animate({opacity: 1}, 500);
+        $("#yesButton").delay(12000).prop("disabled", false);
+        $("#noButton").delay(12000).prop("disabled", false);
+      }
+
+      function yes() {
+        $("body").fadeOut( 2000, function(){ window.location.href = "yes1.html" } );
+      }
+
+      function no() {
+        $("body").fadeOut( 2000, function(){ window.location.href = "no1.html" } );
+      }
+
+
+      var timer = setInterval("nextImage()", 1000);
+      var curr = 1;
+      var numImages = 6;
+
+      function nextImage() {
+          var e;
+          // remove showMe class from current image
+          e = document.getElementById("slide" + curr);
+
+          e.classList.remove("showMe");
+          
+          // compute next image
+          curr++;
+          if (curr > numImages - 1) {
+              curr = 1;
+          }
+          
+          // add showMe class to next image
+          e = document.getElementById("slide" + curr);
+
+          e.classList.add("showMe");
+      }
+
+    </script>
   </body>
 </html>
