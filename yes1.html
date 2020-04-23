@@ -30,10 +30,11 @@
           width: 300px;
           height: 300px;
           position: relative;
-          left: 35%;
+          left: 36.5%;
           top: 50%; 
           margin-left: -150px;
-          margin-top: -100px;
+          margin-top: -20px;
+          opacity: 0;
         }
 
         #frame {
@@ -63,9 +64,23 @@
           opacity: 0;
         }
         .showMoreButton {
-          position: absolute;
-          left: 950px;
-          top: 600px;
+          margin: auto;
+          width: 50%;
+          padding: 10px;
+          text-align: center;
+          background: none;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          font-family: 'Roboto Mono', monospace;
+          font-size: 12pt;
+        }
+
+        .showMoreButton2 {
+          width: 50%;
+          padding: 10px;
+          text-align: center;
+          top: 500px;
           background: none;
           border: none;
           outline: none;
@@ -114,36 +129,23 @@
             <p id="text1">
                 You are not wrong in thinking that AI generated art is significantly different than human generated art. 
             </p>
+            <button id="button1" class="showMoreButton" onclick="showNext()">Continue</button>
             <p class="text" id="text2"> 
-                <br> 
                In fact, a recent AI-generated portrait auctioned for over $400,000 garnered critics from the public as well as the auction house itself. 
             </p>
             <div id="canvasContainer">
-            <img id="frame" src="frame.png">
-            <img class="painting" id="slide1" src="picasso1.jpg">
+              <img id="frame" src="frame.png">
+              <img class="painting" id="slide1" src="picasso1.jpg">
+              </div>
+              <p class="text" id="text3">Created by a GAN algorithm, "Portrait of Edmond Belamy" was created using over 15,000 test images.  </p> 
+              <p class="text" id="text4">The auction house noted that the piece was “not a product of the human mind” but instead was “created by artificial intelligence, an algorithm defined by an algebraic equation.”</p> 
+              <p class="text" id="text5">The selling of this piece begs the question of whether AI-generated content can really be thought of as authentic art.</p>
+              </p>
             </div>
-            <p class="text" id="text3">Created by a GAN algorithm, "Portrait of Edmond Belamy" was created using over 15,000 test images.  </p> 
-            <p class="text" id="text4">The auction house noted that the piece was “not a product of the human mind” but instead was “created by artificial intelligence, an algorithm defined by an algebraic equation.”</p> 
-            <p class="text" id="text5">The selling of this piece begged the question of whether AI-generated content could really be thought of as art?</p>
-            </p>
-        </div>
-        <button id="button1" class="showMoreButton" onclick="showNext()">Continue</button>
-        <div class="textContainer" id="textContainer2">
-          <p class="text_reveal" id="text6">
-              You later discover it was created by AI...
-          </p>
-          <p class="text_reveal" id="text7" style="opacity: 0">
-              Mimicking the style of Picasso. <br> <br>
-          </p>
-          <p class="text_reveal" id="text8" style="opacity: 0">Is your enjoyment of the painting diminished?</p> 
-          <p class="text_reveal" id="text9" style="opacity: 0">Do you find it less aesthetically pleasing?</p> 
-          <p class="text_reveal" id="text10" style="opacity: 0">Would you not want it on your wall?</p>
-          </p>
-        </div>
-        <button id="button1" class="showMoreButton" onclick="showNext()">Continue</button>
+        <p>
         <button id="button2" class="showMoreButton" onclick="showNext2()" disabled>Continue</button>
-        <button id="yesButton" class="YNbutton" onclick="yes()" disabled>Yes, it changes my opinion</button>
-        <button id="noButton" class="YNbutton" onclick="no()" disabled>No, I appreciate it the same</button>
+        </p>
+
     </div>
   
     <script>
@@ -153,8 +155,9 @@
       function showNext() {
         $("#button1").prop("disabled", true);
         $("#button1").animate({opacity: 0}, 500);
-        $("#button1").css("visibility", "hidden");
+        $("#button1").remove();
         $("#text2").delay(1000).animate({opacity: 1}, 200);
+        $("#canvasContainer").delay(2000).animate({opacity: 1}, 500);
         $("#text3").delay(4000).animate({opacity: 1}, 500);
         $("#text4").delay(6000).animate({opacity: 1}, 500);
         $("#text5").delay(8000).animate({opacity: 1}, 500);
@@ -173,7 +176,6 @@
         $("#text8").delay(5000).animate({opacity: 1}, 500);
         $("#text9").delay(7500).animate({opacity: 1}, 500);
         $("#text10").delay(10000).animate({opacity: 1}, 500);
-
         $(".YNbutton").css("visibility", "visible");
         $("#yesButton").delay(12000).animate({opacity: 1}, 500);
         $("#noButton").delay(12000).animate({opacity: 1}, 500);
@@ -188,12 +190,6 @@
       function no() {
         $("body").fadeOut( 2000, function(){ window.location.href = "no1.html" } );
       }
-
-
-      var timer = setInterval("nextImage()", 1000);
-      var curr = 1;
-      var numImages = 6;
-
      
 
     </script>
