@@ -98,27 +98,7 @@
         #textContainer2 {
           opacity: 0;
         }
-        .YNbutton {
-          position: absolute;
-          background: none;
-          border: none;
-          outline: none;
-          cursor: pointer;
-          font-family: 'Roboto Mono', monospace;
-          font-size: 12pt;
-          visibility: hidden;
-          opacity: 0;
-        }
-        #yesButton {
-          width: 265px;
-          top: 600px;
-          left: 650px;
-        }
-        #noButton {
-          width: 290px;
-          top: 600px;
-          left: 1050px;
-        }
+
 
     </style>
   </head>
@@ -136,14 +116,14 @@
             <div id="canvasContainer">
               <img id="frame" src="frame.png">
               <img class="painting" id="slide1" src="picasso1.jpg">
-              </div>
+            </div>
               <p class="text" id="text3">Created by a GAN algorithm, "Portrait of Edmond Belamy" was created using over 15,000 test images.  </p> 
               <p class="text" id="text4">The auction house noted that the piece was “not a product of the human mind” but instead was “created by artificial intelligence, an algorithm defined by an algebraic equation.”</p> 
               <p class="text" id="text5">The selling of this piece begs the question of whether AI-generated content can really be thought of as authentic art.</p>
               </p>
             </div>
-        <button id="button2" class="showMoreButton2" onclick="yes2()" disabled>Continue</button>
-    </div>
+        </div>
+    <button id="button2" class="showMoreButton2" onclick="yes2()" disabled>Continue</button>
   
     <script>
       $(document).ready(function () {
