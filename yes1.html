@@ -77,10 +77,10 @@
         }
 
         .showMoreButton2 {
+          margin: auto;
           width: 50%;
           padding: 10px;
           text-align: center;
-          top: 500px;
           background: none;
           border: none;
           outline: none;
@@ -142,10 +142,7 @@
               <p class="text" id="text5">The selling of this piece begs the question of whether AI-generated content can really be thought of as authentic art.</p>
               </p>
             </div>
-        <p>
-        <button id="button2" class="showMoreButton" onclick="showNext2()" disabled>Continue</button>
-        </p>
-
+        <button id="button2" class="showMoreButton2" onclick="showNext2()" disabled>Continue</button>
     </div>
   
     <script>
@@ -156,11 +153,11 @@
         $("#button1").prop("disabled", true);
         $("#button1").animate({opacity: 0}, 500);
         $("#button1").remove();
-        $("#text2").delay(1000).animate({opacity: 1}, 200);
+        $("#text2").delay(1000).animate({opacity: 1}, 500);
         $("#canvasContainer").delay(2000).animate({opacity: 1}, 500);
-        $("#text3").delay(4000).animate({opacity: 1}, 500);
-        $("#text4").delay(6000).animate({opacity: 1}, 500);
-        $("#text5").delay(8000).animate({opacity: 1}, 500);
+        $("#text3").delay(3000).animate({opacity: 1}, 500);
+        $("#text4").delay(5000).animate({opacity: 1}, 500);
+        $("#text5").delay(7000).animate({opacity: 1}, 500);
         $("#button2").delay(10000).animate({opacity: 1}, 500);
         $("#button2").delay(10000).css("visibility", "visible");
         $("#button2").delay(10000).prop("disabled", false);
