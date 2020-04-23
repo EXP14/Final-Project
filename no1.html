@@ -140,10 +140,10 @@
             </div>
               <p class="text" id="text3">The producers of "Portrait of Belamy" explain that Generative Adversarial Networks (GANs), though given identical training datasets, will always produce different results. Therefore, the concept of artistic originality is captured.</p> 
               <p class="text" id="text4">As written by Kudryashev Fedorovish and Elkhova Igorevna, the creative process can be broken down into two stages: search and composition. The end result is the creation of an original product.</p> 
-              <p class="text" id="text5">Artificial intelligence is certainly capable of these two stages. The “intelligence” of AI is procession information from  a human-inputted training dataset. Similarities, differences, and other relationships are formed by comparing various data points which then are turned into an original product based on information gathered from the training dataset.</p>
+              <p class="text" id="text5">Artificial intelligence is certainly capable of these two stages. The “intelligence” of AI is processing information from  a human-inputted training dataset. Similarities, differences, and other relationships are formed by comparing various data points which then are turned into an original product based on information gathered from the training dataset.</p>
               </p>
             </div>
-        <button id="button2" class="showMoreButton2" onclick="showNext2()" disabled>Continue</button>
+        <button id="button2" class="showMoreButton2" onclick="no2()" disabled>Continue</button>
     </div>
   
     <script>
@@ -164,28 +164,7 @@
         $("#button2").delay(7000).prop("disabled", false);
       }
 
-      function showNext2() {
-        $("#button2").prop("disabled", true);
-        $("#button2").animate({opacity: 0}, 500);
-        $("#button2").css("visibility", "hidden");
-        $("#textContainer1").animate({opacity: 0}, 500);
-        $("#textContainer2").delay(500).animate({opacity: 1}, 500);
-        $("#text7").delay(2500).animate({opacity: 1}, 500);
-        $("#text8").delay(5000).animate({opacity: 1}, 500);
-        $("#text9").delay(7500).animate({opacity: 1}, 500);
-        $("#text10").delay(10000).animate({opacity: 1}, 500);
-        $(".YNbutton").css("visibility", "visible");
-        $("#yesButton").delay(12000).animate({opacity: 1}, 500);
-        $("#noButton").delay(12000).animate({opacity: 1}, 500);
-        $("#yesButton").delay(12000).prop("disabled", false);
-        $("#noButton").delay(12000).prop("disabled", false);
-      }
-
-      function yes() {
-        $("body").fadeOut( 2000, function(){ window.location.href = "yes1.html" } );
-      }
-
-      function no() {
+      function no2() {
         $("body").fadeOut( 2000, function(){ window.location.href = "no1.html" } );
       }
      
