@@ -21,51 +21,34 @@
             opacity: 1;
         }
         #container {
-          vertical-align: middle;
-          margin: 30px 30px;
+          /*  vertical-align: middle;
+          margin: 30px 30px; */
           height: 100%;
           width: 100%;
         }
         #canvasContainer {
-          top: 10%;
+          width: 300px;
+          height: 300px;
           position: relative;
-          width: 35%;
-/*)
-          margin-top: 20px;
- 	        width: 50%;
-	        padding: 10px;  
-          position: relative;
-          width: 50%; */
+          left: 35%;
+          top: 50%; 
+          margin-left: -150px;
+          margin-top: -100px;
         }
 
         #frame {
+          float: center;
           height: 300px;
           width: 200px;
-          position: relative;
+          position: absolute;
           z-index: 100;
-          /* margin: auto;
- 	        width: 50%;
-          padding: 10px;
-          height: 400px;
-          width: 230px; 
-          position: relative;
-          z-index: 100; */
         }
         .painting {
-          margin-top: 70px;
           vertical-align: middle;
           height: 275px;
-          width: 130px;
+          width: 200px;
           z-index: 80;
           position: absolute;
-          /*
-          margin: auto;
- 	        width: 50%;
-	        padding: 10px;
-          height: 360px;
-          width: 200px;
-          z-index: 80; 
-          position: absolute; */
         }
         .textContainer {
 		      margin: auto;
@@ -135,8 +118,10 @@
                 <br> 
                In fact, a recent AI-generated portrait auctioned for over $400,000 garnered critics from the public as well as the auction house itself. 
             </p>
+            <div id="canvasContainer">
             <img id="frame" src="frame.png">
             <img class="painting" id="slide1" src="picasso1.jpg">
+            </div>
             <p class="text" id="text3">Created by a GAN algorithm, "Portrait of Edmond Belamy" was created using over 15,000 test images.  </p> 
             <p class="text" id="text4">The auction house noted that the piece was “not a product of the human mind” but instead was “created by artificial intelligence, an algorithm defined by an algebraic equation.”</p> 
             <p class="text" id="text5">The selling of this piece begged the question of whether AI-generated content could really be thought of as art?</p>
