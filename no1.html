@@ -3,13 +3,13 @@
   <head>
     <title> EXP14 - FINAL PROJECT - ERIC DUANMU & ANGELA MALIAKAL </title>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>
         body, html {
           margin: 0;
           padding: 0;
-          overflow: hidden;
         }
         body {
           opacity: 0;
@@ -21,35 +21,55 @@
             opacity: 1;
         }
         #container {
-          /*  vertical-align: middle;
-          margin: 30px 30px; */
           height: 100%;
           width: 100%;
         }
-        #canvasContainer {
+        #imageContainer {
           width: 300px;
           height: 300px;
           position: relative;
-          left: 36.5%;
           top: 50%; 
-          margin-left: -150px;
           margin-top: -10px;
           opacity: 0;
+          border: solid 5px;
         }
-
-        #frame {
-          float: center;
-          height: 300px;
-          width: 200px;
-          position: absolute;
-          z-index: 100;
+        #text2 {
+          text-align: center;
         }
-        .painting {
+        .image {
+          opacity: 0;
           vertical-align: middle;
-          height: 275px;
-          width: 200px;
+          margin: 0 auto;
+          height: 300px;
+          width: 300px;
           z-index: 80;
-          position: absolute;
+        }
+        .imageCaption {
+          text-align: center;
+          opacity: 0;
+          font-family: 'Merriweather', serif;
+          font-size: 8pt;
+        }
+        .imageTitle {
+          font-family: 'Merriweather', serif;
+          font-size: 8pt;
+          font-style: italic;
+        }
+        .gallery {
+          opacity: 0;
+          margin-left: 10%;
+          margin-right: 10%;
+          width: 80%;
+        }
+        .column {
+          display: inline-block;
+          width: 20%;
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+        .galleryImage {
+          width: 100%;
+          height: 100%;
         }
         .textContainer {
           margin: auto;
@@ -59,15 +79,15 @@
           font-family: 'Roboto Mono', monospace;
           font-size: 10pt;
         }
-
         .text {
           opacity: 0;
           font-size: 10pt;
         }
         .showMoreButton {
-          margin: auto;
-          width: 50%;
-          padding: 10px;
+          left: 50%;
+          margin-top: 300px;
+          margin-left: -20px;
+          width: 70px;
           text-align: center;
           background: none;
           border: none;
@@ -76,11 +96,12 @@
           font-family: 'Roboto Mono', monospace;
           font-size: 10pt;
         }
-
         .showMoreButton2 {
-          margin: auto;
-          width: 50%;
-          padding: 10px;
+          margin-left: 47.25%;
+          margin-right: 47.25%;
+          margin-top: 15px;
+          width: 5.5%;
+          height: 15px;
           text-align: center;
           background: none;
           border: none;
@@ -92,58 +113,54 @@
         .showMoreButton:hover {
           cursor: default;
         }
+        .showMoreButton2:hover {
+          cursor: default;
+        }
         #button2 {
           visibility: hidden;
           opacity: 0;
         }
-        #textContainer2 {
-          opacity: 0;
-        }
-        .YNbutton {
-          position: absolute;
-          background: none;
-          border: none;
-          outline: none;
-          cursor: pointer;
-          font-family: 'Roboto Mono', monospace;
-          font-size: 10pt;
-          visibility: hidden;
-          opacity: 0;
-        }
-        #yesButton {
-          width: 265px;
-          top: 600px;
-          left: 650px;
-        }
-        #noButton {
-          width: 290px;
-          top: 600px;
-          left: 1050px;
-        }
-
     </style>
   </head>
   <body>
     <div id="container">
-
         <div class="textContainer" id="textContainer1">
-            <p id="text1">
-                You're right, AI generated art may not be that significantly different than art created by humans. 
-            </p>
-            <button id="button1" class="showMoreButton" onclick="showNext()">Continue</button>
-            <p class="text" id="text2"> 
-               In fact, the first AI-generated portrait auctioned for over $400,000. 
-            </p>
-            <div id="canvasContainer">
-              <img id="frame" src="frame.png">
-              <img class="painting" id="slide1" src="picasso1.jpg">
+          <p id="text1">
+              You're right, AI generated art may not be significantly different from art created by humans. 
+          </p>
+          <button id="button1" class="showMoreButton" onclick="showNext()">Continue</button>
+          <p class="text" id="text2"> 
+            <span class="text" id="text2_1">In fact, the first AI-generated portrait auctioned for over $400,000</span>
+            <br><br><br>
+            <img class="image" id="edmond" src="edmond.png">
+            <br>
+            <span id="edmondCaption" class="imageCaption">Obvious Art, <span class="imageTitle">Edmond De Belamy</span>, 2018, Ink on canvas</span>
+            <br><br>
+          </p>
+            <p class="text" id="text3">The producers of "Edmond De Belamy" explain that Generative Adversarial Networks (GANs), though given identical training datasets, will always produce different results. Therefore, the concept of artistic originality is captured. <br><br> </p> 
+            <div class="gallery" id="gallery">
+              <div class="column">
+                <img class="galleryImage" src="comtessa.png">
+              </div>
+              <div class="column">
+                <img class="galleryImage" src="duchesse.png">
+              </div>
+              <div class="column">
+                <img class="galleryImage" src="lmarquis.png">
+              </div>
+              <div class="column">
+                <img class="galleryImage" src="madam.png">
+              </div>
             </div>
-              <p class="text" id="text3">The producers of "Portrait of Belamy" explain that Generative Adversarial Networks (GANs), though given identical training datasets, will always produce different results. Therefore, the concept of artistic originality is captured.</p> 
-              <p class="text" id="text4">As written by Kudryashev Fedorovish and Elkhova Igorevna, the creative process can be broken down into two stages: search and composition. The end result is the creation of an original product.</p> 
-              <p class="text" id="text5">Artificial intelligence is certainly capable of these two stages. The “intelligence” of AI is processing information from  a human-inputted training dataset. Similarities, differences, and other relationships are formed by comparing various data points which then are turned into an original product based on information gathered from the training dataset.</p>
-              </p>
-            </div>
+            <p id="galleryCaption" class="imageCaption">Obvious Art, <span class="imageTitle">La Comtesse De Belamy, La Duchesse De Belamy, Le Marquis De Belamy, Madame De Belamy</span>, 2018, Ink on canvas</p>
+            <p class="text" id="text4"><br>As written by Kudryashev Fedorovish and Elkhova Igorevna, the creative process can be broken down into two stages: search and composition. The end result is the creation of an original product.</p> 
+            <p class="text" id="text5">Artificial intelligence is certainly capable of these two stages. The “intelligence” of AI is processing information from  a human-inputted training dataset. Similarities, differences, and other relationships are formed by comparing various data points which then are turned into an original product based on information gathered from the training dataset.</p>
+        </div>
         <button id="button2" class="showMoreButton2" onclick="no2()" disabled>Continue</button>
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
   
     <script>
@@ -155,17 +172,22 @@
         $("#button1").animate({opacity: 0}, 500);
         $("#button1").remove();
         $("#text2").delay(1000).animate({opacity: 1}, 500);
-        $("#canvasContainer").delay(2000).animate({opacity: 1}, 500);
-        $("#text3").delay(3000).animate({opacity: 1}, 500);
-        $("#text4").delay(5000).animate({opacity: 1}, 500);
-        $("#text5").delay(5000).animate({opacity: 1}, 500);
-        $("#button2").delay(7000).animate({opacity: 1}, 500);
-        $("#button2").delay(7000).css("visibility", "visible");
-        $("#button2").delay(7000).prop("disabled", false);
+        $("#text2_1").delay(1000).animate({opacity: 1}, 500);
+        $("#edmond").delay(3000).animate({opacity: 1}, 500);
+        $("#edmondCaption").delay(3000).animate({opacity: 1}, 500);
+        $("#text3").delay(5000).animate({opacity: 1}, 500);
+        $("#gallery").delay(7000).animate({opacity: 1}, 500);
+        $("#galleryCaption").delay(7000).animate({opacity: 1}, 500);
+
+        $("#text4").delay(9000).animate({opacity: 1}, 500);
+        $("#text5").delay(11000).animate({opacity: 1}, 500);
+        $("#button2").delay(13000).animate({opacity: 1}, 500);
+        $("#button2").delay(13000).css("visibility", "visible");
+        $("#button2").delay(13000).prop("disabled", false);
       }
 
       function no2() {
-        $("body").fadeOut( 2000, function(){ window.location.href = "no1.html" } );
+        $("body").fadeOut( 2000, function(){ window.location.href = "no2.html" } );
       }
      
 

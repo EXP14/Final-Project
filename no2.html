@@ -1,1 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> EXP14 - FINAL PROJECT - ERIC DUANMU & ANGELA MALIAKAL </title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        body, html {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          opacity: 0;
+          transition: opacity 0.5s ease-in-out;
+          -moz-transition: opacity 0.5s ease-in-out;
+          -webkit-transition: opacity 0.5s ease-in-out;
+        }
+        body.all-loaded {
+            opacity: 1;
+        }
+        #container {
+          /*  vertical-align: middle;
+          margin: 30px 30px; */
+          height: 100%;
+          width: 100%;
+        }
+        #imageContainer {
+          width: 300px;
+          height: 300px;
+          position: relative;
+          top: 50%; 
+          margin-top: -10px;
+          opacity: 0;
+          border: solid 5px;
+        }
+        #text2 {
+          text-align: center;
+        }
+        .image {
+          opacity: 0;
+          vertical-align: middle;
+          margin: 0 auto;
+          height: 300px;
+          width: 300px;
+          z-index: 80;
+          
+          /* position: absolute; */
+        }
+        .imageCaption {
+          opacity: 0;
+          font-family: 'Merriweather', serif;
+          font-size: 8pt;
+        }
+        .imageTitle {
+          font-family: 'Merriweather', serif;
+          font-size: 8pt;
+          font-style: italic;
+        }
+        .textContainer {
+          margin: auto;
+          width: 50%;
+          padding: 10px;
+          text-align: center;
+          font-family: 'Roboto Mono', monospace;
+          font-size: 10pt;
+        }
+        .text {
+          opacity: 0;
+          font-size: 10pt;
+        }
+        .showMoreButton {
+          left: 50%;
+          margin-top: 300px;
+          margin-left: -20px;
+          width: 70px;
+          text-align: center;
+          background: none;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          font-family: 'Roboto Mono', monospace;
+          font-size: 10pt;
+        }
+        .showMoreButton2 {
+          margin-left: 47.25%;
+          margin-right: 47.25%;
+          width: 5.5%;
+          height: 15px;
+          text-align: center;
+          background: none;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          font-family: 'Roboto Mono', monospace;
+          font-size: 10pt;
+        }
+        .showMoreButton:hover {
+          cursor: default;
+        }
+        .showMoreButton2:hover {
+          cursor: default;
+        }
+        #button2 {
+          visibility: hidden;
+          opacity: 0;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="container">
 
+        <div class="textContainer" id="textContainer1">
+            <p id="text1">
+                Even if AI can believably mimic human art, <br> does it have any creativity of its own?
+            </p>
+            <button id="button1" class="showMoreButton" onclick="showNext()">Continue</button>
+            <p class="text" id="text2">In 1980, philosopher John Searle presented the "Chinese room" thought experiment. <br> It goes as follows:</p>
+            <p class="text" id="text3"><br><br>Suppose a monolingual English speaker is locked in a room with an extensive list of Chinese characters with no English definitions or explanations.</p>
+            <p class="text" id="text4">Now imagine they are given a list of English instructions to correlate certain patterns of Chinese characters to other Chinese characters (i.e. inputs and outputs).</p> 
+            <p class="text" id="text5">What if a Chinese speaker were to slip a Chinese message into the room and the English speaker put together an appropriate response, in Chinese, based solely on the instructions given and with no knowledge of what the input or his output actually mean?</p>
+            <p class="text" id="text6">Even if he fools the Chinese speaker with a conversationally reasonable response, does he truly understand Chinese?</p>
+            <p class="text" id="text7">Searle claims that the monolingual English speaker does not truly understand Chinese and has no insight of the language. Following that same logic, since AI "learns" completely based on computer instructions, AI can not possibly yield insight like a human can.</p>
+            <p class="text" id="text8"><br><br>Even if one were to not consider insight as necessary for art, there is still cultural context to take into consideration.</p>    
+            <p class="text" id="text9">Russian author Leo Tolstoy wrote in his essay "What is Art?" that art is not merely a means of pleasure, but a connection between the artist and the audience. Tolstoy specifically believed that art was primarily a means of emotional union among humans.</p>    
+            <p class="text" id="text10"><br><br>Now you've seen some basic opinions and arguments both for and against AI-generated art.<br>Let's break it down more and help you form your own opinion.<br><br></p>
+            </div>
+        <button id="button2" class="showMoreButton2" onclick="no2()" disabled>Continue</button>
+        <br>
+        <br>
+        <br>
+        <br>
+ 
+    </div>
+  
+    <script>
+      $(document).ready(function () {
+          $('body').addClass("all-loaded");
+      });
+      function showNext() {
+        $("#button1").prop("disabled", true);
+        $("#button1").animate({opacity: 0}, 500);
+        $("#button1").remove();
+        $("#text2").delay(1000).animate({opacity: 1}, 500);
+        $("#text3").delay(4500).animate({opacity: 1}, 500);
+        $("#text4").delay(4500).animate({opacity: 1}, 500);
+        $("#text5").delay(4500).animate({opacity: 1}, 500);
+        $("#text6").delay(4500).animate({opacity: 1}, 500);
+        $("#text7").delay(4500).animate({opacity: 1}, 500);
+        $("#text8").delay(19000).animate({opacity: 1}, 500);
+        $("#text9").delay(22500).animate({opacity: 1}, 500);
+        $("#text10").delay(22500).animate({opacity: 1}, 500);
+        $("#button2").delay(25000).animate({opacity: 1}, 500);
+        $("#button2").delay(25000).css("visibility", "visible");
+        $("#button2").delay(25000).prop("disabled", false);
+      }
+
+      function no2() {
+        $("body").fadeOut( 2000, function(){ window.location.href = "streamline.html" } );
+      }
+     
+
+    </script>
+  </body>
+</html>

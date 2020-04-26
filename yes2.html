@@ -75,7 +75,6 @@
           font-family: 'Roboto Mono', monospace;
           font-size: 12pt;
         }
-
         .showMoreButton2 {
           margin: auto;
           width: 50%;
@@ -91,35 +90,13 @@
         .showMoreButton:hover {
           cursor: default;
         }
+        .showMoreButton2:hover {
+          cursor: default;
+        }
         #button2 {
           visibility: hidden;
           opacity: 0;
         }
-        #textContainer2 {
-          opacity: 0;
-        }
-        .YNbutton {
-          position: absolute;
-          background: none;
-          border: none;
-          outline: none;
-          cursor: pointer;
-          font-family: 'Roboto Mono', monospace;
-          font-size: 12pt;
-          visibility: hidden;
-          opacity: 0;
-        }
-        #yesButton {
-          width: 265px;
-          top: 600px;
-          left: 650px;
-        }
-        #noButton {
-          width: 290px;
-          top: 600px;
-          left: 1050px;
-        }
-
     </style>
   </head>
   <body>
@@ -164,7 +141,7 @@
       }
 
       function yes2() {
-        $("body").fadeOut( 2000, function(){ window.location.href = "yes2.html" } );
+        $("body").fadeOut( 2000, function(){ window.location.href = "streamline.html" } );
       }
      
 

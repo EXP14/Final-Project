@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> EXP14 - FINAL PROJECT - ERIC DUANMU & ANGELA MALIAKAL </title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        body, html {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          opacity: 0;
+          transition: opacity 0.5s ease-in-out;
+          -moz-transition: opacity 0.5s ease-in-out;
+          -webkit-transition: opacity 0.5s ease-in-out;
+        }
+        body.all-loaded {
+            opacity: 1;
+        }
+        #container {
+          height: 100%;
+          margin-top: 275px;
+          margin-left: 3%;
+          margin-right: 3%;
+          width: 94%;
+        }
+        .column {
+          height: 100%;
+          width: 49%;
+          padding: 0;
+        }
+        #questionColumn {
+            float: left;
+            text-align: left;
+            left: 0;
+            height: 200px;
+        }
+        #otherColumn {
+            float: right;
+            text-align: right;
+            right: 0;
+            height: 200px;
+        }
+        .question {
+          font-family: 'Roboto Mono', monospace;
+          font-size: 16px;
+          text-align: left;
+          background: none;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          font-family: 'Roboto Mono', monospace;
+        }
+        #question3 {
+            margin-bottom: 0;
+        }
+        #bibliography {
+            margin-bottom: 0;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+        <div class="column" id="questionColumn">
+            <button class="question" id="question1">Can AI produce "authentic" art?</button>
+            <br><br><br><br>
+            <button class="question" id="question2">At what point should the artist ceded credit to the machine?</button>
+            <br><br><br><br>
+            <button class="question" id="question3">How do we appreciate AI art?</button>
+        </div>
+        <div class="column" id="otherColumn">
+            <button class="question" id="stance">Our stance</button>
+            <br><br><br><br>
+            <br>
+            <br><br><br><br>
+            <button class="question" id="bibliography">Bibliography</button>
+        </div>
+    </div>
+  
+    <script>
+      $(document).ready(function () {
+          $('body').addClass("all-loaded");
+      });
+      function showNext() {
+        $("#button1").prop("disabled", true);
+        $("#button1").animate({opacity: 0}, 500);
+        $("#button1").remove();
+        $("#text2").delay(1000).animate({opacity: 1}, 500);
+        $("#text2_1").delay(1000).animate({opacity: 1}, 500);
+        $("#edmond").delay(3000).animate({opacity: 1}, 500);
+        $("#edmondCaption").delay(3000).animate({opacity: 1}, 500);
+        $("#text3").delay(5000).animate({opacity: 1}, 500);
+        $("#gallery").delay(7000).animate({opacity: 1}, 500);
+        $("#galleryCaption").delay(7000).animate({opacity: 1}, 500);
 
+        $("#text4").delay(9000).animate({opacity: 1}, 500);
+        $("#text5").delay(11000).animate({opacity: 1}, 500);
+        $("#button2").delay(13000).animate({opacity: 1}, 500);
+        $("#button2").delay(13000).css("visibility", "visible");
+        $("#button2").delay(13000).prop("disabled", false);
+      }
+
+      function no2() {
+        $("body").fadeOut( 2000, function(){ window.location.href = "no2.html" } );
+      }
+     
+
+    </script>
+  </body>
+</html>
