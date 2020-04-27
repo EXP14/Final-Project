@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> EXP14 - FINAL PROJECT - ERIC DUANMU & ANGELA MALIAKAL </title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        body, html {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          opacity: 0;
+          transition: opacity 0.5s ease-in-out;
+          -moz-transition: opacity 0.5s ease-in-out;
+          -webkit-transition: opacity 0.5s ease-in-out;
+        }
+        body.all-loaded {
+            opacity: 1;
+        }
+
+      	h2 {
+      		text-align: center;
+      	}
+        #container {
+          height: 100%;
+          margin-top: 100px;
+          margin-left: 3%;
+          margin-right: 3%;
+          width: 94%;
+        }
+        .column {
+          font-family: 'Roboto Mono', monospace;
+          font-size: 16px;
+          text-align: left;
+          height: 100%;
+          width: 60%;
+          padding: 0;
+        }
+        #questionColumn {
+            float: left;
+            text-align: left;
+            left: 0;
+            height: 200px;
+        }
+        #otherColumn {
+            float: right;
+            text-align: right;
+            right: 0;
+            height: 200px;
+        }
+        .question {
+          font-family: 'Roboto Mono', monospace;
+          font-size: 16px;
+          text-align: left;
+          background: none;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          font-family: 'Roboto Mono', monospace;
+        }
+        #question3 {
+            margin-bottom: 0;
+        }
+        #bibliography {
+            margin-bottom: 0;
+        }
+    </style>
+  </head>
+  <body>
+    <h2>What is the definition of authentic?</h2>
+    <div id="container">
+    	<div class="column" id="questionColumn">
+            <p>To be able to answer this question, we must first delve into the definitions of both authentic and art. From looking at all definitions of authentic, it comes down to this: the opposition of faking it. Art on the other hand is thought of as a physical manifestation of a thought or a feeling, with personal experience and cultural context used as inspiration. Others even argue that art is a medium often used to convey the full spectrum of human experiences. </p>
+            <p>By this definition, some may argue that AI will never be considered authentic art. Because it requires test data, and no feeling or personal experience, AI generated art does not align with our notion of art. </p>
+            <p>On the other hand, there is evidence that AI is authentic art. While it creates something completely new and original based off of what already exists, it is not simply a mere mimic as some argue. Instead it is an entirely unique creation where the only difference lies in the tools used to create the piece.</p>
+            <p>Both sides of the argument offer valid points. </p>
+
+        </div>
+        <div class="column" id="otherColumn">
+            <button class="question" id="stance" onclick="homeReturn()">Home</button>
+            <br><br><br><br>
+            <br>
+            <br><br><br><br>
+            <button class="question" id="bibliography" onclick="back()">Back</button>
+        </div>
+    </div>
+  
+    <script>
+      $(document).ready(function () {
+          $('body').addClass("all-loaded");
+      });
+      
+
+      function homeReturn() {
+        $("body").fadeOut( 2000, function(){ window.location.href = "index.html" } );
+      }
+
+       function back() {
+        $("body").fadeOut( 2000, function(){ window.location.href = "streamline.html" } );
+      }
+     
+      function no2() {
+        $("body").fadeOut( 2000, function(){ window.location.href = "no2.html" } );
+      }
+     
+     
+
+    </script>
+  </body>
+</html>
+
 
