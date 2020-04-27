@@ -3,6 +3,11 @@ h1 {
     font-size: 60pt;
 }
 
+h2 {
+	font-family: 'Merriweather', serif;
+    font-size: 30pt;
+}
+
 p {
     font-family: 'Roboto Mono', monospace;
     font-size: 14pt;
