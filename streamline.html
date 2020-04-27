@@ -69,7 +69,7 @@
             <br><br><br><br>
             <button class="question" id="question2" onclick="question2()">2. At what point should the artist ceded credit to the machine?</button>
             <br><br><br><br>
-            <button class="question" id="question3">3. How do we appreciate AI art?</button>
+            <button class="question" id="question3" onclick="question3()">3. How do we appreciate AI art?</button>
         </div>
         <div class="column" id="otherColumn">
             <button class="question" id="stance">Our stance</button>
@@ -115,6 +115,9 @@
         $("body").fadeOut( 2000, function(){ window.location.href = "question2.html" } );
       }
 
+      function question3() {
+        $("body").fadeOut( 2000, function(){ window.location.href = "question3.html" } );
+      }
     </script>
   </body>
 </html>
