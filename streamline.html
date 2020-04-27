@@ -65,7 +65,7 @@
   <body>
     <div id="container">
         <div class="column" id="questionColumn">
-            <button class="question" id="question1">1. Can AI produce "authentic" art?</button>
+            <button class="question" id="question1" onclick="question1()">1. Can AI produce "authentic" art?</button>
             <br><br><br><br>
             <button class="question" id="question2">2. At what point should the artist ceded credit to the machine?</button>
             <br><br><br><br>
@@ -107,6 +107,10 @@
         $("body").fadeOut( 2000, function(){ window.location.href = "no2.html" } );
       }
      
+     function question1() {
+        $("body").fadeOut( 2000, function(){ window.location.href = "question1.html" } );
+      }
+
 
     </script>
   </body>
