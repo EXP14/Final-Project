@@ -7,21 +7,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>
-        body, html {
-          margin: 0;
-          padding: 0;
-        }
-        body {
-          opacity: 0;
-          transition: opacity 0.5s ease-in-out;
-          -moz-transition: opacity 0.5s ease-in-out;
-          -webkit-transition: opacity 0.5s ease-in-out;
-        }
-        body.all-loaded {
-            opacity: 1;
-        }
-
-      	h2 {
+        h2 {
       		text-align: center;
       	}
         #container {
@@ -70,6 +56,7 @@
     </style>
   </head>
   <body>
+    <button id="backButton" onclick="back()">< Back</button>
     <h2>Can AI produce "authentic" art?</h2>
     <div id="container">
     	<div class="column" id="questionColumn">
@@ -95,18 +82,20 @@
       
 
       function homeReturn() {
-        $("body").fadeOut( 2000, function(){ window.location.href = "index.html" } );
+        window.location.href = "index.html";
       }
 
        function back() {
-        $("body").fadeOut( 2000, function(){ window.location.href = "streamline.html" } );
+        window.location.href = "streamline.html";
       }
      
       function no2() {
-        $("body").fadeOut( 2000, function(){ window.location.href = "no2.html" } );
+        window.location.href = "no2.html";
       }
      
-     
+      function back() {
+        window.location.href = "streamline.html";
+      }
 
     </script>
   </body>
