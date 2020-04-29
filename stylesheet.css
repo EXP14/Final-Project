@@ -30,7 +30,7 @@ p {
     font-size: 14pt;
 }
 
-button:hover {
+.button:hover {
     cursor: default;
     color: #8a8a8a;
 }
@@ -49,4 +49,14 @@ button:hover {
 
 #backButton:hover {
     cursor: default;
+    color: #8a8a8a;
 }
+
+.showMoreButton:hover {
+    color: #8a8a8a;
+}
+
+.showMoreButton2:hover {
+    color: #8a8a8a;
+}
+

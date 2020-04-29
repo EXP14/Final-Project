@@ -8,8 +8,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>
         #container {
-          /*  vertical-align: middle;
-          margin: 30px 30px; */
           height: 100%;
           width: 100%;
         }
@@ -32,8 +30,6 @@
           height: 300px;
           width: 300px;
           z-index: 80;
-          
-          /* position: absolute; */
         }
         .imageCaption {
           opacity: 0;
@@ -83,12 +79,6 @@
           font-family: 'Roboto Mono', monospace;
           font-size: 10pt;
         }
-        .showMoreButton:hover {
-          cursor: default;
-        }
-        .showMoreButton2:hover {
-          cursor: default;
-        }
         #button2 {
           visibility: hidden;
           opacity: 0;
@@ -103,7 +93,7 @@
             <p id="text1">
                 Even if AI can believably mimic human art, <br> does it have any creativity of its own?
             </p>
-            <button id="button1" class="showMoreButton" onclick="showNext()">Continue</button>
+            <button id="button1" class="showMoreButton button" onclick="showNext()">Continue</button>
             <p class="text" id="text2">In 1980, philosopher John Searle presented the "Chinese room" thought experiment. <br> It goes as follows:</p>
             <p class="text" id="text3"><br><br>Suppose a monolingual English speaker is locked in a room with an extensive list of Chinese characters with no English definitions or explanations.</p>
             <p class="text" id="text4">Now imagine they are given a list of English instructions to correlate certain patterns of Chinese characters to other Chinese characters (i.e. inputs and outputs).</p> 
@@ -114,7 +104,7 @@
             <p class="text" id="text9">Russian author Leo Tolstoy wrote in his essay "What is Art?" that art is not merely a means of pleasure, but a connection between the artist and the audience. Tolstoy specifically believed that art was primarily a means of emotional union among humans.</p>    
             <p class="text" id="text10"><br><br>Now you've seen some basic opinions and arguments both for and against AI-generated art.<br>Let's break it down more and help you form your own opinion.<br><br></p>
             </div>
-        <button id="button2" class="showMoreButton2" onclick="no2()" disabled>Continue</button>
+        <button id="button2" class="showMoreButton2 button" onclick="no2()" disabled>Continue</button>
         <br>
         <br>
         <br>
