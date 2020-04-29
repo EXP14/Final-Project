@@ -90,19 +90,15 @@
     <div id="container">
         <div class="textContainer" id="textContainer1">
             <p id="text1">
-                Even if AI "thinks" differently from humans, <br>isn't there some room for algorithmic art?
+                Even if AI "thinks" differently from humans, <br>does that really mean artifical creativity is impossible?
             </p>
             <button id="button1" class="showMoreButton button" onclick="showNext()">Continue</button>
-            <p class="text" id="text2">In 1980, philosopher John Searle presented the "Chinese room" thought experiment. <br> It goes as follows:</p>
-            <p class="text" id="text3">Suppose a monolingual English speaker is locked in a room with an extensive list of Chinese characters with no English definitions or explanations.</p>
-            <p class="text" id="text4">Now imagine they are given a list of English instructions to correlate certain patterns of Chinese characters to other Chinese characters (i.e. inputs and outputs).</p> 
-            <p class="text" id="text5">What if a Chinese speaker were to slip a Chinese message into the room and the English speaker put together an appropriate response, in Chinese, based solely on the instructions given and with no knowledge of what the input or his output actually mean?</p>
-            <p class="text" id="text6">Even if he fools the Chinese speaker with a conversationally reasonable response, does he truly understand Chinese?</p>
-            <p class="text" id="text7">Searle claims that the monolingual English speaker does not truly understand Chinese and has no insight of the language. Following that same logic, since AI "learns" completely based on computer instructions, AI can not possibly yield insight like a human can.</p>
-            <p class="text" id="text8">Even if one were to not consider insight as necessary for art, there is still cultural context to take into consideration.</p>    
-            <p class="text" id="text9">Russian author Leo Tolstoy wrote in his essay "What is Art?" that art is not merely a means of pleasure, but a connection between the artist and the audience. Tolstoy specifically believed that art was primarily a means of emotional union among humans.</p>    
-            <p class="text" id="text10">Now you've seen some basic opinions and arguments both for and against AI-generated art.<br>Let's break it down more and help you form your own opinion.<br><br></p>
-            </div>
+            <p class="text" id="text2">In his paper "Developing Creativity: Artificial Barriers in Artificial Intelligence," Kyle Jennings argues that a system has creative autonomy if changes its standard "without explicit direction." Therefore, if sufficiently "smart" AI is embedded in a larger society of artists and audience where opinions can be learned and formed, there is possibility of creative autonomity.</p>
+            <p class="text" id="text3">Elkhova Oxana Igorevna and Kudryashev Alexandr Fedorovich from Bashkir State University argue that AI will eventually be able to compete with human creativity, but just not yet. In their paper "The Creative Ability of Artificial Intelligence," Igorevna and Fedorovich conclude that there are no "insurmountable obstacles to the competition between aritfical intelligence and man" and that the current limiting factor for AI creativity is the lack of a dataset great enough to compete with human common sense.</p>
+            <p class="text" id="text4">Looking in the present day, there is already room for AI art. The critic must not see AI as a human competitor, but as an instrument for humans to utilize. Then, a whole new medium arises where technology can gracefully meet with art.</p>
+            <p class="text" id="text5">In a blog post on Medium, David Vandegrift challenges the argument that AI can not be creative due to its inherent sole ability to follow the developer's instructions. Many argue that because AI only follows instructions, any resemblance of creativity should be accredited to the developer. But then, who is to say human creativity does not follow an instruction set from something beyond us?</p>
+            <p class="text" id="text6"><br><br>Now you've seen some basic opinions and arguments both for and against AI-generated art.<br>Let's break it down more and help you form your own opinion.<br><br></p>
+          </div>
         <button id="button2" class="showMoreButton2 button" onclick="no2()" disabled>Continue</button>
         <br>
         <br>
@@ -120,14 +116,10 @@
         $("#button1").animate({opacity: 0}, 500);
         $("#button1").remove();
         $("#text2").delay(1000).animate({opacity: 1}, 500);
-        $("#text3").delay(4500).animate({opacity: 1}, 500);
-        $("#text4").delay(4500).animate({opacity: 1}, 500);
-        $("#text5").delay(4500).animate({opacity: 1}, 500);
-        $("#text6").delay(4500).animate({opacity: 1}, 500);
-        $("#text7").delay(4500).animate({opacity: 1}, 500);
-        $("#text8").delay(9000).animate({opacity: 1}, 500);
-        $("#text9").delay(12500).animate({opacity: 1}, 500);
-        $("#text10").delay(12500).animate({opacity: 1}, 500);
+        $("#text3").delay(3000).animate({opacity: 1}, 500);
+        $("#text4").delay(5000).animate({opacity: 1}, 500);
+        $("#text5").delay(7000).animate({opacity: 1}, 500);
+        $("#text6").delay(9000).animate({opacity: 1}, 500);
         $("#button2").delay(15000).animate({opacity: 1}, 500);
         $("#button2").delay(15000).css("visibility", "visible");
         $("#button2").delay(15000).prop("disabled", false);
