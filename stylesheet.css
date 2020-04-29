@@ -30,6 +30,11 @@ p {
     font-size: 14pt;
 }
 
+button:hover {
+    cursor: default;
+    color: #8a8a8a;
+}
+
 #backButton {
     top: 20px;
     left: 20px;
@@ -43,6 +48,5 @@ p {
 }
 
 #backButton:hover {
-    position: fixed;
     cursor: default;
 }
