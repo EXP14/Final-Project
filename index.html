@@ -7,18 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>
         body, html {
-          margin: 0;
-          padding: 0;
           overflow: hidden;
-        }
-        body {
-          opacity: 0;
-          transition: opacity 0.5s ease-in-out;
-          -moz-transition: opacity 0.5s ease-in-out;
-          -webkit-transition: opacity 0.5s ease-in-out;
-        }
-        body.all-loaded {
-            opacity: 1;
         }
         #container {
           vertical-align: middle;
@@ -207,13 +196,12 @@
       }
 
       function yes() {
-        $("body").fadeOut( 2000, function(){ window.location.href = "yes1.html" } );
+        window.location.href = "yes1.html";
       }
 
       function no() {
-        $("body").fadeOut( 2000, function(){ window.location.href = "no1.html" } );
+        window.location.href = "no1.html";
       }
-
 
       var timer = setInterval("nextImage()", 1000);
       var curr = 1;

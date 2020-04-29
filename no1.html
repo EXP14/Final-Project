@@ -7,19 +7,6 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>
-        body, html {
-          margin: 0;
-          padding: 0;
-        }
-        body {
-          opacity: 0;
-          transition: opacity 0.5s ease-in-out;
-          -moz-transition: opacity 0.5s ease-in-out;
-          -webkit-transition: opacity 0.5s ease-in-out;
-        }
-        body.all-loaded {
-            opacity: 1;
-        }
         #container {
           height: 100%;
           width: 100%;
@@ -73,7 +60,7 @@
         }
         .textContainer {
           margin: auto;
-          width: 50%;
+          width: 60%;
           padding: 10px;
           text-align: center;
           font-family: 'Roboto Mono', monospace;
@@ -123,6 +110,7 @@
     </style>
   </head>
   <body>
+    <button id="backButton" onclick="back()">< Back</button>
     <div id="container">
         <div class="textContainer" id="textContainer1">
           <p id="text1">
@@ -137,7 +125,7 @@
             <span id="edmondCaption" class="imageCaption">Obvious Art, <span class="imageTitle">Edmond De Belamy</span>, 2018, Ink on canvas</span>
             <br><br>
           </p>
-            <p class="text" id="text3">The producers of "Edmond De Belamy" explain that Generative Adversarial Networks (GANs), though given identical training datasets, will always produce different results. Therefore, the concept of artistic originality is captured. <br><br> </p> 
+            <p class="text" id="text3">The producers of "Edmond De Belamy", French collective Obvious Art, explain that Generative Adversarial Networks (GANs), though given identical training datasets, will always produce different results. Therefore, the concept of artistic originality is captured.<br><br> </p> 
             <div class="gallery" id="gallery">
               <div class="column">
                 <img class="galleryImage" src="comtessa.png">
@@ -153,9 +141,11 @@
               </div>
             </div>
             <p id="galleryCaption" class="imageCaption">Obvious Art, <span class="imageTitle">La Comtesse De Belamy, La Duchesse De Belamy, Le Marquis De Belamy, Madame De Belamy</span>, 2018, Ink on canvas</p>
-            <p class="text" id="text4"><br>As written by Kudryashev Fedorovish and Elkhova Igorevna, the creative process can be broken down into two stages: search and composition. The end result is the creation of an original product.</p> 
-            <p class="text" id="text5">Artificial intelligence is certainly capable of these two stages. The “intelligence” of AI is processing information from  a human-inputted training dataset. Similarities, differences, and other relationships are formed by comparing various data points which then are turned into an original product based on information gathered from the training dataset.</p>
-        </div>
+            <p class="text" id="text4"><br>Why should creativity be exclusive to humans? The creative process, after all, is simply the process of creating an original product based on relationships found in prior information.</p> 
+            <p class="text" id="text5">The program that produced these paintings goes through the process. Each painting is an original product based on similarities and differences found between a dataset of over 15,000 real paintings.</p>
+            <p class="text" id="text6">Of course, the program hasn't experienced cultural phenomena or changes in society's aesthetic expectations, but these criteria are completely arbitrary.</p>
+            <p class="text" id="text7">Even if you don't consider AI-generated art to be comparable to human art due to the lack of humanity, there can certainly be room for an AI genre. Just as photo-realistic charcoal portraits are not compared to modern abstract paintings, AI-generated art can occupy its own realm where the beauty is found in the algorithms, datasets, and randomness.</p>
+          </div>
         <button id="button2" class="showMoreButton2" onclick="no2()" disabled>Continue</button>
         <br>
         <br>
@@ -181,15 +171,20 @@
 
         $("#text4").delay(9000).animate({opacity: 1}, 500);
         $("#text5").delay(11000).animate({opacity: 1}, 500);
-        $("#button2").delay(13000).animate({opacity: 1}, 500);
-        $("#button2").delay(13000).css("visibility", "visible");
-        $("#button2").delay(13000).prop("disabled", false);
+        $("#text6").delay(13000).animate({opacity: 1}, 500);
+        $("#text7").delay(15000).animate({opacity: 1}, 500);
+        $("#button2").delay(17000).animate({opacity: 1}, 500);
+        $("#button2").delay(17000).css("visibility", "visible");
+        $("#button2").delay(17000).prop("disabled", false);
       }
 
       function no2() {
-        $("body").fadeOut( 2000, function(){ window.location.href = "no2.html" } );
+        window.location.href = "no2.html";
       }
      
+      function back() {
+          window.location.href = "index.html";
+      }
 
     </script>
   </body>

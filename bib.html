@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> EXP14 - FINAL PROJECT - ERIC DUANMU & ANGELA MALIAKAL </title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .textContainer {
+          height: 100%;
+          width: 70%;
+        }
+        .cite {
+          font-family: 'Merriweather', serif;
+          text-align: left;
+          font-size: 12pt;
+        }
+        .website {
+            font-family: 'Merriweather', serif;
+            font-size: 12pt;
+            font-style: italic;
+        }
+    </style>
+  </head>
+  <body>
+    <button id="backButton" onclick="back()">< Back</button>
+    <center>
+        <div class="textContainer" id="textContainer1">
+            <h2>Works Cited</h2>
+            <p class="cite" id="cite1">Igorevna, Elkhova Oxana, and Kudryashev Alexandr Fedorovich. “The Creative Ability of Artificial Intelligence.” <span class="website">Creative Studies</span>, Routledge, Dec. 2017, journals.vgtu.lt/index.php/CS/article/view/518/374.</p>
+            <br>
+            <p class="cite" id="cite2">Jennings, Kyle E. “Developing Creativity: Artificial Barriers in Artificial Intelligence.” <span class="website">Springer Link</span>, Springer Netherlands, 2 Oct. 2010, link.springer.com/article/10.1007/s11023-010-9206-y.</p>
+            <br>
+            <p class="cite" id="cite3">Kinsella, Eileen. “The First AI-Generated Portrait Ever Sold at Auction Shatters Expectations, Fetching $432,500-43 Times Its Estimate.” <span class="website">Artnet News</span>, Artnet News, 25 Oct. 2018, news.artnet.com/market/first-ever-artificial-intelligence-portrait-painting-sells-at-christies-1379902.</p>
+            <br>
+            <p class="cite" id="cite4">Obvious. “A Naive Yet Educated Perspective on Art and Artificial Intelligence.” <span class="website">Medium</span>, Medium, 28 Sept. 2018, medium.com/@hello.obvious/a-naive-yet-educated-perspective-on-art-and-artificial-intelligence-9e16783e73da.</p>
+            <br>
+            <p class="cite" id="cite5">Riedl, Mark O. “The Lovelace 2.0 Test of Artificial Creativity and Intelligence.” <span class="website">arXiv</span>, Georgia Institute of Technology School of Interactive Computing, 22 Dec. 2014, arxiv.org/pdf/1410.6142v3.pdf.</p>
+            <br>
+            <p class="cite" id="cite6">Roza, Felp. “Artificial Artist: Can Artificial Intelligence Create Art?” <span class="website">Medium</span>, Towards Data Science, 13 May 2019, towardsdatascience.com/artificial-artist-can-artificial-intelligence-create-art-d7dd6ed98270.</p>
+            <br>
+            <p class="cite" id="cite7">Space150. “TravisBott: Travis Scott Brought To You By Artificial Intelligence.” <span class="website">Space150</span>, Space150, Feb. 2020, www.space150.com/work/v45-travisbott.</p>
+        </div>
+    </center>
+    <script>
+        $(document).ready(function () {
+          $('body').addClass("all-loaded");
+      });
 
+      function back() {
+          window.location.href = "streamline.html";
+      }
+    </script>
+  </body>
+</html>

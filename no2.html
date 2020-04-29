@@ -7,19 +7,6 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>
-        body, html {
-          margin: 0;
-          padding: 0;
-        }
-        body {
-          opacity: 0;
-          transition: opacity 0.5s ease-in-out;
-          -moz-transition: opacity 0.5s ease-in-out;
-          -webkit-transition: opacity 0.5s ease-in-out;
-        }
-        body.all-loaded {
-            opacity: 1;
-        }
         #container {
           /*  vertical-align: middle;
           margin: 30px 30px; */
@@ -60,7 +47,7 @@
         }
         .textContainer {
           margin: auto;
-          width: 50%;
+          width: 60%;
           padding: 10px;
           text-align: center;
           font-family: 'Roboto Mono', monospace;
@@ -109,6 +96,7 @@
     </style>
   </head>
   <body>
+    <button id="backButton" onclick="back()">< Back</button>
     <div id="container">
 
         <div class="textContainer" id="textContainer1">
@@ -157,9 +145,12 @@
       }
 
       function no2() {
-        $("body").fadeOut( 2000, function(){ window.location.href = "streamline.html" } );
+        window.location.href = "streamline.html";
       }
      
+      function back() {
+          window.location.href = "no1.html";
+      }
 
     </script>
   </body>
